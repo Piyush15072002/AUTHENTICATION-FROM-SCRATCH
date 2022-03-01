@@ -1,0 +1,26 @@
+<% layout('boilerplate') -%>
+
+    <% if(!loggedIn){ %>
+        <div>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </div>
+        <% }else{ %>
+            <div>
+                <form action="/logout" method="POST">
+                    <button type="submit" class="">Logout</button>
+                </form>
+            </div>
+            <% } %>
+
+                <div>
+                    <h1>WELCOME TO AUTH BASICS</h1>
+                    <p>Here we will make an authenticated application where user can login, register and logout.
+                        This will be fully hardcoded and no tools will be used here for basic authentication
+                        We will be using PASSPORT.js in our next authentication version but for now we will make a basic
+                        auth
+                        to understand the working and core mechanisms of such authentication and authorization.
+
+                    </p>
+                    <a href="/index">Go to Index</a>
+                </div>
